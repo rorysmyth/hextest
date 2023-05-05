@@ -1,7 +1,7 @@
 schemaVersion: 2
 meta:
   sourceVersionId: 71721622-7d91-4cc2-b57b-e78e5a1c85b0 # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
-  description: Learn the basics of Hex using SQL, Python and no-code.
+  description: Learn something
   projectId: 9563c77d-c579-4b0a-956e-258a379fd1dc # DO NOT CHANGE - Unique ID of the project from which this file was generated
   title: Welcome to Hex!
   timezone: null
