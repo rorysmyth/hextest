@@ -1,0 +1,1039 @@
+schemaVersion: 2
+meta:
+  sourceVersionId: 71721622-7d91-4cc2-b57b-e78e5a1c85b0 # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
+  description: Learn the basics of Hex using SQL, Python and no-code.
+  projectId: 9563c77d-c579-4b0a-956e-258a379fd1dc # DO NOT CHANGE - Unique ID of the project from which this file was generated
+  title: Welcome to Hex!
+  timezone: null
+  appTheme: SYS_PREF
+  codeLanguage: PYTHON
+  status: null
+  categories: []
+  castDecimalsDefault: true
+  logicQueryCacheTimeout: null
+  publishedQueryCacheTimeout: null
+projectAssets:
+  dataConnections: []
+  envVars: []
+  secrets: []
+sharedAssets:
+  secrets: []
+  vcsPackages: []
+  dataConnections:
+    - dataConnectionId: 66b1559d-6837-4aec-8ac4-b08435f3015d # [Demo] Hex Public Data (snowflake)
+cells:
+  - cellType: TEXT
+    cellId: 076ddd7f-0995-41f4-8e1c-1d0b122795e2 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      richText:
+        - type: h3
+          children:
+            - text: This is a project in your Hex workspace.
+        - type: ul
+          children:
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: Hex projects are similar to traditional data notebooks, but bake in real-time collaboration, rich SQL support, and a whole suite of other new abilities.
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: "If you ever want to return to your workspace homepage, just click the "
+                    - bold: true
+                      text: Hex
+                    - text: " logo in the upper left ↖️."
+        - type: h4
+          children:
+            - bold: true
+              text: " We got you started with sample data from a fictional dumpling restaurant:"
+  - cellType: SQL
+    cellId: 0755fea4-defd-43b9-b04e-243bf6d00500 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: Orders
+    config:
+      source: |-
+        select *
+        from prod.order_details -- this SQL cell queries a demo dataset based on a fictional dumpling restaurant.
+      dataFrameCell: false
+      dataConnectionId: 66b1559d-6837-4aec-8ac4-b08435f3015d
+      resultVariableName: orders
+      useRichDisplay: true
+      sqlCellOutputType: PANDAS
+      useQueryMode: false
+      castDecimals: true
+      useNativeDates: true
+      outputFilteredResult: false
+      allowDuplicateColumns: true
+      tableDisplayConfig:
+        pageSize: 12
+        height: null
+        hideIcons: false
+        hideIndex: false
+        defaultSortColumn: null
+        defaultSortIndexColumn: null
+        defaultSortDirection: ASC
+        conditionalFormatting: null
+        filters: null
+        columnProperties:
+          - originalName: CATEGORY
+            renameTo: null
+            size: 130
+            wrapText: null
+            displayFormat: null
+          - originalName: CUSTOMER_ID
+            renameTo: null
+            size: 153
+            wrapText: null
+            displayFormat: null
+          - originalName: IS_ALLERGEN_FREE
+            renameTo: null
+            size: 182
+            wrapText: null
+            displayFormat: null
+          - originalName: IS_SPICY
+            renameTo: null
+            size: 122
+            wrapText: null
+            displayFormat: null
+          - originalName: MENU_ITEM
+            renameTo: null
+            size: 163
+            wrapText: null
+            displayFormat: null
+          - originalName: MENU_ITEM_ID
+            renameTo: null
+            size: 159
+            wrapText: null
+            displayFormat: null
+          - originalName: ORDERED_AT
+            renameTo: null
+            size: 196
+            wrapText: null
+            displayFormat: null
+          - originalName: ORDER_DATE
+            renameTo: null
+            size: 145
+            wrapText: null
+            displayFormat: null
+          - originalName: ORDER_ID
+            renameTo: null
+            size: 110
+            wrapText: null
+            displayFormat: null
+          - originalName: ORDER_ITEM_ID
+            renameTo: null
+            size: 108
+            wrapText: null
+            displayFormat: null
+          - originalName: ORDER_STATUS
+            renameTo: null
+            size: 158
+            wrapText: null
+            displayFormat: null
+          - originalName: PRICE
+            renameTo: null
+            size: 105
+            wrapText: null
+            displayFormat: null
+        columnOrdering: null
+  - cellType: TEXT
+    cellId: 4ec6e36e-9301-4db7-8842-0fc5e6fe24a3 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      richText:
+        - type: h2
+          children:
+            - text: Combining SQL, python, and no-code
+        - type: h4
+          children:
+            - text: 'Everything in Hex happens in modular bits of logic called "cells". '
+        - type: ul
+          children:
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - bold: true
+                      text: "Text cells "
+                    - text: like this one are useful for adding commentary and creating headers for organization.
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: "There's also "
+                    - bold: true
+                      text: "SQL cells, code cells, chart cells, "
+                    - text: "and more! "
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: "To explore all our cell types, click the "
+                    - bold: true
+                      text: "+ Add cell "
+                    - text: "button in the upper left, or move your cursor between two cells and click the "
+                    - bold: true
+                      text: "+ Add "
+                    - text: button.
+  - cellType: TEXT
+    cellId: e15074d6-b980-42c8-adea-b609db8cc2af # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      richText:
+        - type: h4
+          children:
+            - text: "The real magic happens when you string cells together to build complex analyses. "
+        - type: ul
+          children:
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: "For example, the "
+                    - bold: true
+                      text: Python code cell
+                    - text: " below references the output of the "
+                    - code: true
+                      text: orders
+                    - text: " "
+                    - bold: true
+                      text: "SQL cell "
+                    - text: "above to examine the distribution of columns. "
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: "Hex projects use a standard, no-surprises Python environment. You can import packages from our extensive pre-installed library, or install your own using the "
+                    - code: true
+                      text: "!pip install <package>"
+                    - text: " syntax in a Python cell."
+  - cellType: CODE
+    cellId: 2f6e2e48-0a27-44ec-8215-7671d32feaec # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      source: orders.describe()
+  - cellType: CHARTV2
+    cellId: 481dcf08-a600-40e7-a60a-88554f0f39f2 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      height: null
+      chartSpec:
+        type: layered
+        layers:
+          - id: 7fb069dd-c79e-4982-96d9-7a0c5856da43
+            xAxis:
+              type: string
+              style:
+                grid:
+                  style: solid
+                ticks: {}
+                labels: {}
+              dataFrameColumn: ORDER_STATUS
+            series:
+              - id: 6a7e2a2f-7e03-4acc-a53a-2e6e06314fd8
+                type: bar
+                axis:
+                  type: number
+                  style:
+                    grid:
+                      style: solid
+                    ticks: {}
+                    labels: {}
+                  aggregate: sum
+                dataFrameColumns:
+                  - PRICE
+                colorDataFrameColumn: CATEGORY
+                colorOrder: []
+                color:
+                  type: series
+                  colorsBySeriesValues: {}
+                opacity:
+                  type: static
+                  value: 1
+                tooltip:
+                  type: auto
+                barWidth: 1
+                orientation: vertical
+                layout: grouped
+            dataFrame: orders
+        settings:
+          legend:
+            position: right
+          tooltip: true
+          selectionEnabled: true
+      chartSelection:
+        bar_intervalselection_: {}
+        legend_pointselection_:
+          - CATEGORY: Dumplings
+          - CATEGORY: Noodles
+      resultVariable: selection
+  - cellType: TEXT
+    cellId: 9198aaaf-3df7-4a44-96c9-680a836f00cb # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      richText:
+        - type: ul
+          children:
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: "Even charts can be part of interactive chains of cells. Try clicking to select a different column on the chart above and watch the "
+                    - bold: true
+                      text: "table display cell "
+                    - text: below update.
+  - cellType: TABLE_DISPLAY
+    cellId: c34619c2-26fc-4569-bb00-5ca8e858a7d2 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      dataFrameVariableName: selection
+      resultVariable: table_result
+      tableDisplayConfig:
+        pageSize: 12
+        height: null
+        hideIcons: false
+        hideIndex: false
+        defaultSortColumn: null
+        defaultSortIndexColumn: null
+        defaultSortDirection: ASC
+        conditionalFormatting: null
+        filters: null
+        columnProperties:
+          - originalName: CATEGORY
+            renameTo: null
+            size: 130
+            wrapText: null
+            displayFormat: null
+          - originalName: CUSTOMER_ID
+            renameTo: null
+            size: 153
+            wrapText: null
+            displayFormat: null
+          - originalName: IS_ALLERGEN_FREE
+            renameTo: null
+            size: 182
+            wrapText: null
+            displayFormat: null
+          - originalName: IS_SPICY
+            renameTo: null
+            size: 122
+            wrapText: null
+            displayFormat: null
+          - originalName: MENU_ITEM
+            renameTo: null
+            size: 163
+            wrapText: null
+            displayFormat: null
+          - originalName: MENU_ITEM_ID
+            renameTo: null
+            size: 159
+            wrapText: null
+            displayFormat: null
+          - originalName: ORDERED_AT
+            renameTo: null
+            size: 196
+            wrapText: null
+            displayFormat: null
+          - originalName: ORDER_DATE
+            renameTo: null
+            size: 156
+            wrapText: null
+            displayFormat: null
+          - originalName: ORDER_ID
+            renameTo: null
+            size: 129
+            wrapText: null
+            displayFormat: null
+          - originalName: ORDER_ITEM_ID
+            renameTo: null
+            size: 165
+            wrapText: null
+            displayFormat: null
+          - originalName: ORDER_STATUS
+            renameTo: null
+            size: 158
+            wrapText: null
+            displayFormat: null
+          - originalName: PRICE
+            renameTo: null
+            size: 105
+            wrapText: null
+            displayFormat: null
+        columnOrdering: null
+  - cellType: TEXT
+    cellId: 7edb9c97-f8d1-4f32-9f3e-f776ebadad65 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      richText:
+        - type: h2
+          children:
+            - text: Cells automatically run from top to bottom
+        - type: ul
+          children:
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: "Go up to the top of the project and change that first "
+                    - url: https://app.hex.tech/hex-public/hex/83698c84-0edc-43e5-9463-28af64d5b850/draft/logic?selectedStaticCellId=b4f70ae2-eef0-4bd5-9318-f91770efcb58
+                      type: a
+                      children:
+                        - text: SQL query
+                    - text: " to only return data for dumplings (hint: add "
+                    - code: true
+                      text: WHERE category = 'Dumplings'
+                    - text: " on a new line at the bottom) and re-run it by clicking the "
+                    - bold: true
+                      text: Run
+                    - text: " button in the top right of the cell, or using the "
+                    - code: true
+                      text: cmd+enter
+                    - text: " keyboard shortcut. "
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: "You'll notice that the Python code and the Chart both also re-executed and updated their outputs. "
+        - type: h4
+          children:
+            - bold: true
+              text: When any cell is run in Hex, the upstream and downstream dependencies also automatically re-run, so everything is always up-to-date.
+        - type: ul
+          children:
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: "You can run all cells in a project using the "
+                    - bold: true
+                      text: Run all
+                    - text: " button in the top right. This is also where any major errors will be displayed, and where you can restart the project if necessary."
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: "To visualize the relationships of cells, open up the "
+                    - bold: true
+                      text: Graph
+                    - text: . This is helpful for debugging complex projects, and can also display cell runtimes to troubleshoot performance.
+  - cellType: TEXT
+    cellId: 4a1960a6-708d-49db-88b1-156bd1f2b527 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      richText:
+        - type: h2
+          children:
+            - text: Chained SQL
+        - type: h4
+          children:
+            - bold: true
+              text: Hex lets you write SQL against the output of previous SQL queries 🤯.
+        - type: ul
+          children:
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: "That first "
+                    - url: https://app.hex.tech/hex-public/hex/83698c84-0edc-43e5-9463-28af64d5b850/draft/logic?selectedStaticCellId=b4f70ae2-eef0-4bd5-9318-f91770efcb58
+                      type: a
+                      children:
+                        - text: SQL query
+                    - text: " in the project is returning a dataframe called "
+                    - code: true
+                      text: orders
+                    - text: ". "
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: "The SQL cell below writes a new query against "
+                    - code: true
+                      text: orders
+                    - text: ", effectively creating a CTE or subquery, but without complicating the original query. "
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: This lets you break complex SQL up into small, reusable, debuggable bits of logic!
+  - cellType: SQL
+    cellId: ee2bb0d1-1916-4525-aba6-e015f1ff87c9 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: Monthly orders
+    config:
+      source: |-
+        select date_trunc('month', order_date) as month,
+               count(*) as count_orders
+        from orders
+        group by 1
+        order by 1 asc
+      dataFrameCell: false
+      dataConnectionId: 66b1559d-6837-4aec-8ac4-b08435f3015d
+      resultVariableName: monthly_orders
+      useRichDisplay: false
+      sqlCellOutputType: PANDAS
+      useQueryMode: false
+      castDecimals: true
+      useNativeDates: true
+      outputFilteredResult: false
+      allowDuplicateColumns: false
+      tableDisplayConfig: null
+  - cellType: TEXT
+    cellId: 1995d381-ebb8-4f82-b3a7-7e38fb12490a # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      richText:
+        - type: ul
+          children:
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: These "chains" can go on infinitely for complex workloads.
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: 'SQL-only chains can be run with the Source set to the warehouse, like above. To write SQL against a dataframe created or modified from a different cell type— like a Python cell, or a visual filter selection— change the source of the SQL cell to "Dataframes": '
+  - cellType: CODE
+    cellId: 08f16b55-b146-4eaa-ade1-5da5805f5c84 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      source: monthly_orders['rolling_4_avg'] = monthly_orders.rolling(window=4)['COUNT_ORDERS'].mean()
+  - cellType: SQL
+    cellId: 11da6e89-5620-48cf-8cda-41e8319a0a63 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      source: SELECT * from monthly_orders -- this SQL query is running against a Python dataframe in the project, not against the Snowflake database.
+      dataFrameCell: true
+      dataConnectionId: null
+      resultVariableName: dataframe_2
+      useRichDisplay: false
+      sqlCellOutputType: PANDAS
+      useQueryMode: false
+      castDecimals: true
+      useNativeDates: true
+      outputFilteredResult: false
+      allowDuplicateColumns: false
+      tableDisplayConfig: null
+  - cellType: TEXT
+    cellId: 5c774e60-3bee-4da4-af0e-63e9f6bda30f # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      richText:
+        - type: h2
+          children:
+            - text: Adding Interactivity
+        - type: h4
+          children:
+            - text: "Hex projects can be made interactive with "
+            - bold: true
+              text: Input Parameters, which accept input from a user and return a variable for use in Python or SQL.
+        - type: ul
+          children:
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: "This is a dropdown input that has selections populated from the earlier "
+                    - code: true
+                      text: orders
+                    - text: " SQL query."
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: "It returns a variable "
+                    - code: true
+                      text: menu_items
+                    - text: " that can be referenced downstream in SQL and Text (using double bracket jinja "
+                    - url: https://learn.hex.tech/docs/logic-cell-types/sql-cells/sql-parameterization#docusaurus_skipToContent_fallback
+                      type: a
+                      children:
+                        - text: syntax)
+                    - text: " or in Python (by directly referencing the variable)."
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: Try changing the dropdown selection and watch the SQL query, text, and chart below re-execute automatically.
+  - cellType: INPUT
+    cellId: 36d99c35-f8c8-43f0-b218-ebdcce43f711 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: Menu item
+    config:
+      inputType: DROPDOWN
+      name: menu_item
+      outputType: DYNAMIC
+      options:
+        valueOptions:
+          dfName: orders
+          columnName: MENU_ITEM
+          variableName: orders['MENU_ITEM']
+      defaultValue: Shrimp and Pork Siu Mai
+  - cellType: SQL
+    cellId: c8d76f07-210d-45ea-b152-2f819db12a54 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: Selected item
+    config:
+      source: |-
+        select *
+        from orders
+        where menu_item = {{menu_item}}
+      dataFrameCell: false
+      dataConnectionId: 66b1559d-6837-4aec-8ac4-b08435f3015d
+      resultVariableName: selected_item
+      useRichDisplay: false
+      sqlCellOutputType: PANDAS
+      useQueryMode: false
+      castDecimals: true
+      useNativeDates: true
+      outputFilteredResult: false
+      allowDuplicateColumns: false
+      tableDisplayConfig: null
+  - cellType: TEXT
+    cellId: ffa18b16-01eb-4730-9fdd-8822a4d56f00 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      richText:
+        - type: h3
+          children:
+            - text: ""
+            - id: ad056b9a
+              type: hex_reference
+              value: "{{ menu_item }}"
+              children:
+                - text: ""
+            - text: " Order Volume"
+  - cellType: CHARTV2
+    cellId: 77ed81ea-1882-4b13-9a16-6a14ba6bc12a # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      height: null
+      chartSpec:
+        type: layered
+        layers:
+          - id: a8a2f403-aeaa-493f-bd40-a73df9a34dad
+            xAxis:
+              type: datetime
+              style:
+                grid:
+                  style: solid
+                ticks: {}
+                labels: {}
+              title: Order Date
+              timeUnit: yearmonth
+              dataFrameColumn: ORDER_DATE
+            series:
+              - id: 2e398013-edb6-420c-9b0c-30436d075c93
+                type: line
+                axis:
+                  type: number
+                  style:
+                    grid:
+                      style: solid
+                    ticks: {}
+                    labels: {}
+                  title: Orders
+                  aggregate: sum
+                dataFrameColumns:
+                  - ORDER_ID
+                colorOrder: []
+                color:
+                  type: static
+                  color: "#4C78A8"
+                opacity:
+                  type: static
+                  value: 1
+                tooltip:
+                  type: auto
+                point: false
+                stroke: solid
+            dataFrame: selected_item
+        settings:
+          legend:
+            position: right
+          tooltip: true
+          selectionEnabled: false
+      chartSelection: {}
+      resultVariable: filter_result
+  - cellType: TEXT
+    cellId: cba72961-ada0-4817-ad16-b70fbaeed620 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      richText:
+        - type: h2
+          children:
+            - text: Collaboration and Multiplayer
+        - type: h4
+          children:
+            - bold: true
+              text: Hex has powerful real-time collaboration.
+            - text: " "
+        - type: ul
+          children:
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: "Share this project with a teammate using the dialog in the top right, and you'll be able to see their presence and their edits in real-time. "
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: "Project checkpoints, called "
+                    - bold: true
+                      text: Versions
+                    - text: ", are autosaved after one hour of inactivity."
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: "You can manually save Versions from the "
+                    - bold: true
+                      text: History & versions
+                    - text: " sidebar panel."
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: Projects can be configured to
+                    - url: https://learn.hex.tech/docs/versioning/git-sync#sync-a-hex-project-to-a-git-repo
+                      type: a
+                      children:
+                        - text: " sync to Git "
+                    - text: and optionally require Pull requests for changes to production
+  - cellType: TEXT
+    cellId: e8521918-3f3c-47e3-92fa-8fbf4403fc43 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      richText:
+        - type: h2
+          children:
+            - text: Projects are designed to be published
+        - type: h4
+          children:
+            - text: "Hex projects can be turned into interactive, shareable apps. "
+        - type: ul
+          children:
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: "To build an App from your Logic, go to the "
+                    - bold: true
+                      text: App
+                    - text: " tab (or Alt/Option + Shift + 2)."
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: All the cells from the Logic become building blocks of a beautiful app, dashboard, or document. Drag, drop, and resize any element to build your masterpiece!
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: Not all cells need to be included in your finished app, and you can choose to hide or show the code powering any cell.
+        - type: h4
+          children:
+            - text: Publishing a Hex app makes it instantly accessible to anyone it's shared with.
+        - type: paragraph
+          children:
+            - text: No knowledge of Python or SQL required. Just a URL. So try it out!
+        - type: ol
+          children:
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: "Head over to the "
+                    - bold: true
+                      text: App
+                    - text: " view, drag some elements around until it looks just right (maybe remove this boring old text cell)"
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: Click the big green Publish button to push it live.
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: Use the Share button to make it available to specific people, your whole company, or even the entire internet.
+        - type: h3
+          children:
+            - bold: true
+              text: "Once you've done that, you've mastered the basic flow of Hex:"
+        - type: ol
+          children:
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: Explore your data in the Logic view, flowing between SQL, Python, Text, and No-code cells.
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: When you've got something worth sharing, quickly curate it into an app, or a story, or a dashboard.
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: Share the interactive app with the stakeholders that need to see it.
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: Comment, collaborate, and iterate!
+  - cellType: TEXT
+    cellId: 18d1204a-680b-4dd6-ad57-6ba8a0ddce6e # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      richText:
+        - type: h2
+          children:
+            - text: What's next?
+        - type: p
+          children:
+            - text: If you are the first administrator of a Hex workspace, follow the
+            - bold: true
+              text: " "
+            - url: https://learn.hex.tech/quickstart/workspace-admin-101
+              type: a
+              children:
+                - bold: true
+                  text: "Admin Quickstart "
+            - text: to get everything set up.
+        - type: p
+          children:
+            - text: Otherwise, go forth and analyze! The best way to learn is to jump into a brand new project and explore around. Try importing the
+            - code: true
+              text: "[Demo] Hex Public Data"
+            - text: " connection to explore all our sample datasets. Or see what your teammates are building from your workspace homepage. "
+        - type: p
+          children:
+            - bold: true
+              text: "For inspiration and helpful resources, check out:"
+        - type: ul
+          children:
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: ""
+                    - url: https://learn.hex.tech/docs
+                      type: a
+                      children:
+                        - text: "Official Hex Documentation "
+                    - text: ""
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: ""
+                    - url: https://learn.hex.tech/tutorials
+                      type: a
+                      children:
+                        - text: Hex Tutorials
+                    - text: ""
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: ""
+                    - url: https://hex.tech/use-cases
+                      type: a
+                      children:
+                        - text: Use Case Gallery
+                    - text: ""
+            - type: li
+              children:
+                - type: lic
+                  children:
+                    - text: "The #tools-hex channel in the "
+                    - url: https://www.getdbt.com/community/join-the-community/
+                      type: a
+                      children:
+                        - text: dbt slack
+                    - text: ""
+appLayout:
+  fullWidth: false
+  visibleMetadataFields:
+    - NAME
+    - AUTHOR
+    - LAST_EDITED
+    - LAST_RUN
+    - CATEGORIES
+    - STATUS
+    - DESCRIPTION
+  rows:
+    - columns:
+        - start: 0
+          end: 120
+          elements:
+            - showSource: false
+              hideOutput: false
+              type: CELL
+              cellId: 076ddd7f-0995-41f4-8e1c-1d0b122795e2
+              height: null
+              showLabel: true
+    - columns:
+        - start: 0
+          end: 120
+          elements:
+            - showSource: false
+              hideOutput: false
+              type: CELL
+              cellId: 4ec6e36e-9301-4db7-8842-0fc5e6fe24a3
+              height: null
+              showLabel: true
+    - columns:
+        - start: 0
+          end: 120
+          elements:
+            - showSource: false
+              hideOutput: false
+              type: CELL
+              cellId: e15074d6-b980-42c8-adea-b609db8cc2af
+              height: null
+              showLabel: true
+    - columns:
+        - start: 0
+          end: 120
+          elements:
+            - showSource: false
+              hideOutput: false
+              type: CELL
+              cellId: 2f6e2e48-0a27-44ec-8215-7671d32feaec
+              height: null
+              showLabel: true
+    - columns:
+        - start: 0
+          end: 120
+          elements:
+            - showSource: false
+              hideOutput: false
+              type: CELL
+              cellId: 481dcf08-a600-40e7-a60a-88554f0f39f2
+              height: null
+              showLabel: true
+    - columns:
+        - start: 0
+          end: 120
+          elements:
+            - showSource: false
+              hideOutput: false
+              type: CELL
+              cellId: 9198aaaf-3df7-4a44-96c9-680a836f00cb
+              height: null
+              showLabel: true
+    - columns:
+        - start: 0
+          end: 120
+          elements:
+            - showSource: false
+              hideOutput: false
+              type: CELL
+              cellId: c34619c2-26fc-4569-bb00-5ca8e858a7d2
+              height: null
+              showLabel: true
+    - columns:
+        - start: 0
+          end: 120
+          elements:
+            - showSource: false
+              hideOutput: false
+              type: CELL
+              cellId: 7edb9c97-f8d1-4f32-9f3e-f776ebadad65
+              height: null
+              showLabel: true
+    - columns:
+        - start: 0
+          end: 120
+          elements:
+            - showSource: false
+              hideOutput: false
+              type: CELL
+              cellId: 4a1960a6-708d-49db-88b1-156bd1f2b527
+              height: null
+              showLabel: true
+    - columns:
+        - start: 0
+          end: 120
+          elements:
+            - showSource: false
+              hideOutput: false
+              type: CELL
+              cellId: 1995d381-ebb8-4f82-b3a7-7e38fb12490a
+              height: null
+              showLabel: true
+    - columns:
+        - start: 0
+          end: 120
+          elements:
+            - showSource: false
+              hideOutput: false
+              type: CELL
+              cellId: 5c774e60-3bee-4da4-af0e-63e9f6bda30f
+              height: null
+              showLabel: true
+    - columns:
+        - start: 0
+          end: 30
+          elements:
+            - showSource: false
+              hideOutput: false
+              type: CELL
+              cellId: 36d99c35-f8c8-43f0-b218-ebdcce43f711
+              height: null
+              showLabel: true
+    - columns:
+        - start: 0
+          end: 120
+          elements:
+            - showSource: false
+              hideOutput: false
+              type: CELL
+              cellId: ffa18b16-01eb-4730-9fdd-8822a4d56f00
+              height: null
+              showLabel: true
+    - columns:
+        - start: 0
+          end: 120
+          elements:
+            - showSource: false
+              hideOutput: false
+              type: CELL
+              cellId: 77ed81ea-1882-4b13-9a16-6a14ba6bc12a
+              height: null
+              showLabel: true
+    - columns:
+        - start: 0
+          end: 120
+          elements:
+            - showSource: false
+              hideOutput: false
+              type: CELL
+              cellId: cba72961-ada0-4817-ad16-b70fbaeed620
+              height: null
+              showLabel: true
+    - columns:
+        - start: 0
+          end: 120
+          elements:
+            - showSource: false
+              hideOutput: false
+              type: CELL
+              cellId: e8521918-3f3c-47e3-92fa-8fbf4403fc43
+              height: null
+              showLabel: true
+    - columns:
+        - start: 0
+          end: 120
+          elements:
+            - showSource: false
+              hideOutput: false
+              type: CELL
+              cellId: 18d1204a-680b-4dd6-ad57-6ba8a0ddce6e
+              height: null
+              showLabel: true
